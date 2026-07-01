@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     libcurl4-openssl-dev \
+    libicu-dev \
     && docker-php-ext-install pdo pdo_mysql mysqli mbstring exif pcntl bcmath gd zip intl curl \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
