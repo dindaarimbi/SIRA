@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
     libcurl4-openssl-dev \
     libicu-dev \
     && docker-php-ext-install pdo pdo_mysql mysqli mbstring exif pcntl bcmath gd zip intl curl \
+    && a2dismod mpm_event \
+    && a2enmod mpm_prefork \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 
