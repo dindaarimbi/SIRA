@@ -1,0 +1,146 @@
+/* ==========================================================================
+   SIREPO TIF - Form Input Custom Style 
+   ========================================================================== */
+
+:root {
+    --primary-green: #2D6A4F;   /* Hijau khas SIREPO TIF */
+    --primary-hover: #1B4332;
+    --accent-gold: #D4AF37;     /* Aksen emas elegan */
+    --bg-light: #F8FAFC;        /* Abu-abu sangat muda bersih */
+    --text-dark: #1E293B;       /* Slate dark untuk keterbacaan tinggi */
+    --text-muted: #64748B;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    /* Pattern background halus logo/grid */
+    background-image: radial-gradient(rgba(45, 106, 79, 0.02) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+/* Header & Navigasi */
+.page-header {
+    background: white;
+    padding: 16px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-green);
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section (Judul Form Premium) */
+.hero-form-section {
+    background: linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%);
+    color: white;
+    padding: 40px 0;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 10px 30px rgba(45, 106, 79, 0.1);
+}
+
+/* Card Indikator Rombak Total */
+.custom-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+    border-left: 5px solid var(--accent-gold); /* Pindah ke kiri untuk aksen list modern */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(45, 106, 79, 0.06);
+    border-left-color: var(--primary-green); /* Berubah hijau saat di-hover */
+}
+
+.indikator-badge {
+    background-color: rgba(45, 106, 79, 0.08) !important;
+    color: var(--primary-green) !important;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.indikator-title {
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Pilihan Status Container */
+.status-container {
+    background: #F1F5F9;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Form Input & Textarea */
+.form-control {
+    border: 1.5px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.nilai-preview{
+    background: #F8FAFC;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    min-width: 80px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.12);
+}
+
+/* Buttons */
+.btn-submit {
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.2);
+}
+
+.btn-back {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background-color: white;
+    color: var(--primary-green);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

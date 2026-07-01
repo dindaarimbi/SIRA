@@ -1,0 +1,130 @@
+/* ==========================================================================
+   SIREPO TIF - Hasil Penilaian Dashboard Style 
+   ========================================================================== */
+
+:root {
+    --primary-green: #2D6A4F;   /* Hijau khas SIREPO TIF */
+    --primary-hover: #1B4332;
+    --accent-gold: #D4AF37;     /* Aksen emas elegan */
+    --bg-light: #F8FAFC;        /* Abu-abu sangat muda bersih */
+    --text-dark: #1E293B;       /* Slate dark untuk keterbacaan tinggi */
+    --text-muted: #64748B;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    background-image: radial-gradient(rgba(45, 106, 79, 0.02) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+/* Header & Navigasi */
+.page-header {
+    background: white;
+    padding: 16px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-green);
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section (Judul Besar Atas) */
+.hero-form-section {
+    background: linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%);
+    color: white;
+    padding: 40px 0;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 10px 30px rgba(45, 106, 79, 0.1);
+}
+
+.btn-back {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background-color: white;
+    color: var(--primary-green);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Container Tabel Premium */
+.table-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #F8FAFC;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.table th {
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 16px;
+}
+
+.table td {
+    padding: 16px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+/* Badge Status Kustom Berwarna (Sesuai ENUM Database) */
+.badge-status {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.status-sangat-baik { background-color: #D1E7DD; color: #0F5132; }
+.status-baik { background-color: #CFF4FC; color: #055160; }
+.status-cukup { background-color: #FFF3CD; color: #664D03; }
+.status-kurang { background-color: #F8D7DA; color: #842029; }
+.status-belum { background-color: #E2E8F0; color: #475569; }
+
+/* Tombol Download/Lihat File Bukti */
+.btn-download {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-download-active {
+    background-color: rgba(45, 106, 79, 0.1);
+    color: var(--primary-green);
+    border: 1px solid rgba(45, 106, 79, 0.2);
+}
+
+.btn-download-active:hover {
+    background-color: var(--primary-green);
+    color: white;
+    box-shadow: 0 4px 10px rgba(45, 106, 79, 0.15);
+}

@@ -1,0 +1,128 @@
+/* ==========================================================================
+   SIREPO TIF - List Kriteria Dashboard Style 
+   ========================================================================== */
+
+:root {
+    --primary-green: #2D6A4F;   /* Hijau khas SIREPO TIF */
+    --primary-hover: #1B4332;
+    --accent-gold: #D4AF37;     /* Aksen emas elegan */
+    --bg-light: #F8FAFC;        /* Abu-abu sangat muda bersih */
+    --text-dark: #1E293B;       /* Slate dark */
+    --text-muted: #64748B;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    background-image: radial-gradient(rgba(45, 106, 79, 0.02) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+/* Header & Navigasi */
+.page-header {
+    background: white;
+    padding: 16px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-green);
+    letter-spacing: 0.5px;
+}
+
+/* Hero Dashboard Header */
+.hero-dashboard-section {
+    background: linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%);
+    color: white;
+    padding: 50px 0;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 10px 30px rgba(45, 106, 79, 0.1);
+}
+
+/* Card Menu Kriteria */
+.kriteria-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kriteria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(45, 106, 79, 0.08);
+    border-color: rgba(45, 106, 79, 0.2);
+}
+
+/* Badge Kode Kriteria (K1, K2, dll) */
+.kriteria-code-badge {
+    background-color: rgba(225, 181, 20, 0.912);
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.kriteria-title {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Pengaturan Tombol Aksi */
+.btn-action-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 16px;
+}
+
+.btn-menu {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Tombol Kelola Data Form */
+.btn-menu-input {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+}
+
+.btn-menu-input:hover {
+    background-color: var(--primary-hover);
+    color: white;
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.2);
+}
+
+/* Tombol Lihat Laporan */
+.btn-menu-report {
+    background-color: #D4AF37;
+    color: #ffffff;
+    border: 1px solid #E2E8F0;
+}
+
+.btn-menu-report:hover {
+    background-color: #836505;
+    color: white;
+    box-shadow: 0 4px 12px rgba(222, 190, 4, 0.397);
+}

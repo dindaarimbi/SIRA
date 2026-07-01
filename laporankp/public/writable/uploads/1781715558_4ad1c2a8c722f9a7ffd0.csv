@@ -1,0 +1,43 @@
+﻿id_indikator,id_kriteria,kode_indikator,kategori,nama_indikator
+1,1,1.1.A,Penetapan,Tata kelola internal UPPS dan SOP
+2,1,1.1.B,Penetapan,Fungsi SPMI dan SDM pelaksana
+3,1,1.2.A,Pelaksanaan,Pelaksanaan tata kelola internal UPPS
+4,1,1.2.B,Pelaksanaan,Pelaksanaan fungsi SPMI
+5,1,1.3.A,Evaluasi,Evaluasi tata kelola internal UPPS
+6,1,1.3.B,Evaluasi,Evaluasi fungsi SPMI
+7,1,1.4.A,Pengendalian,Tindak lanjut tata kelola internal
+8,1,1.4.B,Pengendalian,Tindak lanjut fungsi SPMI
+9,1,1.5.A,Peningkatan,Peningkatan tata kelola internal
+10,1,1.5.B,Peningkatan,Peningkatan fungsi SPMI
+11,2,2.1.A,Penetapan,DTPR dan penerimaan mahasiswa
+12,2,2.1.B,Penetapan,Kurikulum Outcome Based Education
+13,2,2.1.C,Penetapan,Fleksibilitas proses pembelajaran
+14,2,2.1.D,Penetapan,Kompetensi dan rekognisi lulusan
+15,2,2.2.A,Pelaksanaan,Pelaksanaan DTPR dan penerimaan mahasiswa
+16,2,2.2.B,Pelaksanaan,Pelaksanaan kurikulum OBE
+17,2,2.2.C,Pelaksanaan,Pelaksanaan fleksibilitas pembelajaran
+18,2,2.2.D,Pelaksanaan,Pelaksanaan kompetensi lulusan
+19,2,2.3.A,Evaluasi,Evaluasi DTPR dan penerimaan mahasiswa
+20,2,2.3.B,Evaluasi,Evaluasi kurikulum OBE
+21,2,2.3.C,Evaluasi,Evaluasi fleksibilitas pembelajaran
+22,2,2.3.D,Evaluasi,Evaluasi kompetensi lulusan
+23,3,3.1.A,Penetapan,Indikator utama kriteria 3
+24,3,3.2.A,Pelaksanaan,Indikator utama kriteria 3
+25,3,3.3.A,Evaluasi,Indikator utama kriteria 3
+26,3,3.4.A,Pengendalian,Indikator utama kriteria 3
+27,3,3.5.A,Peningkatan,Indikator utama kriteria 3
+28,4,4.1.A,Penetapan,Indikator utama kriteria 4
+29,4,4.2.A,Pelaksanaan,Indikator utama kriteria 4
+30,4,4.3.A,Evaluasi,Indikator utama kriteria 4
+31,4,4.4.A,Pengendalian,Indikator utama kriteria 4
+32,4,4.5.A,Peningkatan,Indikator utama kriteria 4
+33,5,5.1.A,Penetapan,Indikator utama kriteria 5
+34,5,5.2.A,Pelaksanaan,Indikator utama kriteria 5
+35,5,5.3.A,Evaluasi,Indikator utama kriteria 5
+36,5,5.4.A,Pengendalian,Indikator utama kriteria 5
+37,5,5.5.A,Peningkatan,Indikator utama kriteria 5
+38,6,6.1.A,Penetapan,Indikator utama kriteria 6
+39,6,6.2.A,Pelaksanaan,Indikator utama kriteria 6
+40,6,6.3.A,Evaluasi,Indikator utama kriteria 6
+41,6,6.4.A,Pengendalian,Indikator utama kriteria 6
+42,6,6.5.A,Peningkatan,Indikator utama kriteria 6

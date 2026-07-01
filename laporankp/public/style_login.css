@@ -1,0 +1,203 @@
+/* ==========================================================================
+   ANIMASI SPLASH SCREEN (PRELOADER)
+   ========================================================================== */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #113826 0%, #164e33 100%); /* Warna hijau identitas TIF */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Memastikan berada di paling atas objek lain */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Kontainer Konten Tengah - Dibuat Lebih Luas */
+.splash-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Jarak antar elemen di dalam kotak diperlebar sedikit */
+    max-width: 600px; /* Batas lebar kotak diperbesar agar megah */
+    width: 90%;
+    padding: 20px;
+}
+
+/* Logo Besar Kriterra - Ukurannya Dinaikkan */
+.splash-logo {
+    width: 450px; /* Ukuran dinaikkan dari 280px agar jauh lebih gede dan puas dilihat */
+    height: auto;
+    border-radius: 24px; /* Sudut lengkungan disesuaikan dengan ukuran barunya */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); /* Efek bayangan dipertebal agar makin terkesan 3D */
+    animation: pulseLogo 2s infinite ease-in-out;
+}
+
+/* Loading Bar Emas - Disesuaikan agar Seimbang dengan Logonya */
+.splash-loader {
+    width: 300px; /* Lebar loading bar diperpanjang dari 180px agar proporsional */
+    height: 5px; /* Sedikit lebih tebal */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-progress {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #facc15, #eab308); /* Warna emas berkilau */
+    border-radius: 10px;
+    animation: loadProgress 2s forwards ease-in-out;
+}
+
+/* Kelas khusus yang dipicu oleh JavaScript saat loading selesai */
+#splash-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.05); /* Sedikit efek zoom-out saat menghilang */
+}
+
+/* Keyframes Animasi */
+@keyframes pulseLogo {
+    0%, 100% { transform: scale(1); opacity: 0.95; }
+    50% { transform: scale(1.03); opacity: 1; filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.4)); }
+}
+
+@keyframes loadProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Gradasi dasar hijau-putih yang sangat lembut */
+    background: linear-gradient(135deg, #f3f8f6 0%, #e5f0eb 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Pseudo-element khusus untuk mengatur opacity & ukuran watermark tanpa merusak objek lain */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/logo-unimal.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45rem; /* Mengunci diameter logo agar proporsional di monitor manapun */
+    opacity: 0.08; /* Menurunkan intensitas logo menjadi sangat samar & lembut */
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ==========================================================================
+   2. CARD CONTAINER STYLING
+   ========================================================================== */
+.login-card {
+    background: #ffffff;
+    border-radius: 16px;
+    /* Shadow lembut namun tebal di sekeliling komponen sesuai referensi */
+    box-shadow: 0 15px 35px rgba(223, 193, 4, 0.322), 0 5px 15px rgba(230, 227, 151, 0.508);
+    width: 100%;
+    max-width: 440px;
+    padding: 45px 36px;
+    border: 1px solid  #dfa73641;
+    position: relative;
+    z-index: 1; /* Menaikkan form agar berada di atas watermark background */
+}
+
+/* Garis aksen emas di bagian paling atas kartu login */
+.login-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #dfa836; 
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* ==========================================================================
+   3. BRANDING & TYPOGRAPHY
+   ========================================================================== */
+.brand-logo {
+    width: 72px;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px;
+}
+
+h4 {
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   4. FORM ELEMENTS & BUTTONS
+   ========================================================================== */
+.form-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #276547;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 11px 14px;
+    border: 1px solid #dcdfdc;
+    background-color: #fafdfb;
+    font-size: 14.5px;
+    color: #333333;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efek interaktif saat kolom input diklik */
+.form-control:focus {
+    border-color: #276547;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(39, 101, 71, 0.12);
+}
+
+/* Placeholder kustom */
+.form-control::placeholder {
+    color: #a0aab2;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #276547 !important;
+    border-color: #276547 !important;
+    border-radius: 10px;
+    padding: 13px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 12px rgba(39, 101, 71, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1c4a33 !important;
+    box-shadow: 0 6px 16px rgba(39, 101, 71, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}

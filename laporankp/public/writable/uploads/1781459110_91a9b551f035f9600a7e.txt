@@ -1,0 +1,162 @@
+====================================================
+LOGIKA SISTEM AKREDITASI BERBASIS WEB
+====================================================
+
+1. LOGIN
+
+- Admin memasukkan username dan password.
+- Sistem memvalidasi data login pada tabel users.
+- Jika data benar, sistem menampilkan Dashboard.
+- Jika data salah, sistem menampilkan pesan gagal login.
+
+====================================================
+
+2. DASHBOARD
+
+- Menampilkan jumlah kriteria.
+- Menampilkan jumlah indikator.
+- Menampilkan jumlah indikator yang sudah dinilai.
+- Menampilkan jumlah indikator yang belum dinilai.
+- Menampilkan persentase progres penilaian.
+
+====================================================
+
+3. PILIH KRITERIA
+
+- Admin memilih kriteria yang akan dinilai.
+- Sistem menampilkan daftar indikator berdasarkan kriteria yang dipilih.
+
+Contoh:
+
+Kriteria 1 - Budaya Mutu
+Kriteria 2 - Relevansi Pendidikan
+Kriteria 3 - Sumber Daya
+Kriteria 4 - Kemitraan
+Kriteria 5 - Penelitian
+Kriteria 6 - Pengabdian kepada Masyarakat
+Kriteria 7 - Luaran dan Capaian
+
+====================================================
+
+4. PILIH INDIKATOR
+
+- Admin memilih indikator.
+- Sistem menampilkan detail indikator dan form penilaian.
+
+Contoh:
+
+1.1.A Kebijakan Tata Kelola Internal
+1.1.B Kebijakan Fungsi SPMI
+1.2.A Pelaksanaan Tata Kelola Internal
+
+====================================================
+
+5. INPUT PENILAIAN
+
+Admin memilih salah satu kategori penilaian:
+
+Sangat Baik = 4
+Baik        = 3
+Cukup       = 2
+Kurang      = 1
+
+Sistem secara otomatis menentukan nilai berdasarkan pilihan admin.
+
+====================================================
+
+6. INPUT CATATAN
+
+- Admin mengisi catatan atau keterangan hasil evaluasi.
+- Catatan disimpan ke database.
+
+====================================================
+
+7. UPLOAD BUKTI
+
+- Admin mengunggah file bukti pendukung.
+- Format file dapat berupa PDF, DOC, atau DOCX.
+- Sistem menyimpan nama file dan lokasi file ke database.
+
+====================================================
+
+8. SIMPAN DATA
+
+- Sistem menyimpan:
+  * ID Indikator
+  * Status Penilaian
+  * Nilai
+  * Catatan
+  * File Bukti
+
+ke tabel penilaian dan tabel bukti.
+
+====================================================
+
+9. LAPORAN
+
+- Sistem menampilkan hasil penilaian seluruh indikator.
+- Sistem menghitung rata-rata nilai setiap kriteria.
+- Sistem menampilkan rekapitulasi hasil penilaian.
+- Laporan dapat dicetak atau diekspor.
+
+====================================================
+
+ALGORITMA PENILAIAN
+
+Input:
+Status Penilaian
+
+Proses:
+
+Jika Status = Sangat Baik
+    Nilai = 4
+
+Jika Status = Baik
+    Nilai = 3
+
+Jika Status = Cukup
+    Nilai = 2
+
+Jika Status = Kurang
+    Nilai = 1
+
+Output:
+Nilai Penilaian
+
+====================================================
+
+FLOW SISTEM
+
+START
+
+↓
+Login
+
+↓
+Dashboard
+
+↓
+Pilih Kriteria
+
+↓
+Pilih Indikator
+
+↓
+Input Penilaian
+
+↓
+Input Catatan
+
+↓
+Upload Bukti
+
+↓
+Simpan Data
+
+↓
+Laporan
+
+↓
+END
+
+====================================================
