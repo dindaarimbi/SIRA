@@ -11,9 +11,10 @@ RUN apt-get update && apt-get install -y \
     libcurl4-openssl-dev \
     libicu-dev \
     && docker-php-ext-install pdo pdo_mysql mysqli mbstring exif pcntl bcmath gd zip intl curl \
-    && a2dismod mpm_event \
+    && a2dismod mpm_event mpm_worker \
     && a2enmod mpm_prefork \
     && a2enmod rewrite \
+    && ls -la /etc/apache2/mods-enabled/ | grep mpm \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
