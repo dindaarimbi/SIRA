@@ -30,7 +30,7 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Set permission folder writable/ biar CodeIgniter bisa nulis log/cache/session
 RUN chown -R www-data:www-data /var/www/html/writable \
-    && chmod -R 775 /var/www/html/writable
+    && chmod -R 777 /var/www/html/writable
 
 # Arahkan DocumentRoot Apache ke folder public (bukan root project)
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
