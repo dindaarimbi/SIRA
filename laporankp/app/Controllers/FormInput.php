@@ -174,8 +174,8 @@ class FormInput extends BaseController
 
             $fileBukti = $dataPenilaian['file_bukti'];
             if (!empty($fileBukti) && file_exists('writable/uploads/' . $fileBukti)) {
-                unlink('writable/uploads/' . $fileBukti);
-            }
+                @unlink('writable/uploads/' . $fileBukti);
+                    }
 
             $model->delete($id_penilaian);
             return redirect()->to(base_url('hasil/' . $id_kriteria))->with('success', 'Data penilaian dan file bukti terkait berhasil dihapus secara permanen.');
