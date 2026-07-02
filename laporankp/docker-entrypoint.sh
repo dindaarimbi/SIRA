@@ -10,4 +10,8 @@ a2dismod mpm_event >/dev/null 2>&1 || true
 a2dismod mpm_worker >/dev/null 2>&1 || true
 a2enmod mpm_prefork >/dev/null 2>&1 || true
 
+echo "==> Memperbaiki permission folder writable"
+chown -R www-data:www-data /var/www/html/writable
+chmod -R 777 /var/www/html/writable
+
 exec "$@"
