@@ -12,6 +12,9 @@ a2enmod mpm_prefork >/dev/null 2>&1 || true
 
 echo "==> Memperbaiki permission folder writable"
 chown -R www-data:www-data /var/www/html/writable
-chmod -R 777 /var/www/html/writable
+chmod -R 777 /var/www/html/writableecho "==> Memperbaiki permission folder public/uploads"
+mkdir -p /var/www/html/public/uploads
+chown -R www-data:www-data /var/www/html/public/uploads
+chmod -R 777 /var/www/html/public/uploads
 
 exec "$@"
